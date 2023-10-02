@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asset&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&display=swap" rel="stylesheet">
+    <title>Animals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<body class="mw-100">
+
+  <!-- HEADER : ANIMALS TITLE -->
+  <header class="vh-100 d-flex align-items-center">
+    <div class="title">ANI <br>MAL <br> S</div>
+  </header>
+
+  <!-- CARD SECTIONS : DISPLAY/ADD/MODIFY/DELETE ANIMALS CARDS-->
+
+    <section id="cardSection" class="col-12 bg-dark min-vh-100 p-2 d-flex flex-wrap justify-content-md-around">
+      <div class="border border-light col-12 col-lg-5 d-flex justify-content-center align-items-center m-1 cardSectionElements">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddAnimalModal"id="addButton">
+          Add a new animal to our library
+        </button>
+      </div>
+      <!-- MODAL FORM TO ADD ANIMALS-->
+        <div class="modal fade" id="AddAnimalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">New animal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body d-flex justify-content-center">
+                <form action="./php/add.php" method="post" id="addAnimals">
+                  <input class="formInput" type="text" placeholder="name" name="name"><br>
+                  <input class="formInput" type="text" placeholder="weight" name="weight"><br>
+                  <input class="formInput" type="text" placeholder="size" name="size"><br>
+                  <input class="formInput" type="text" placeholder="speed" name="speed"><br>
+                  <input class="formInput" type="text" placeholder="diet" name="diet"><br>
+                  <input class="formInput" type="text" placeholder="location" name="location"><br>
+                  <input class="formInput" type="text" placeholder="picture url" name="picture"><br>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary" >Add</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </form>
+          </div>
+            </div>
+          </div>
+        </div>
+    </section> 
+
+    
+    <!-- STATS TITLE -->
+    <div id="statsTitle" class="col-12 vh-70 d-flex flex-column p-2">
+      <div class="title">STA <br>TS</div>
+    </div>
+
+    <!-- STATS SECTION : DISPLAY ANIMALS DATAS USING CHARTS -->
+    <section id="statSection" class="col-12 min-vh-100 bg-dark d-flex flex-column p-5">
+      
+      <!-- BOOTSTRAP PROGRESS BAR CHART -->
+        <div class="progressBarSpeed col-10 mb-5">
+            <h3 class="text-light">Speed comparison : how fast do animals move ? </h3>
+        </div>
+      
+        <!-- CHARTS JS COLUMN CHART -->
+        <div class="chartWeight col-10 mb-5"> 
+            <h3 class="text-light">Weight comparison : how much do animals weigh ? </h3>
+            <canvas id="columnChartWeight"></canvas>"
+        </div>
+
+    </section> 
+    
+    <script src="./js/animals.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

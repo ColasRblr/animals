@@ -1,0 +1,117 @@
+/* TITLES : HEADER AND MIDDLE "ANIMALS" AND "STATS"*/
+
+header, #statsTitle{
+    background: url(./asset/bg.jpeg) ;
+    background-size:cover ;
+}
+
+.title{
+font-family:'Asset', cursive;
+color:#8FFF67 ;
+font-size: 180px;
+}
+
+.title:hover {
+    cursor: pointer;
+    animation-name: colorchange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes colorchange {
+    0% {
+        color: #8FFF67;
+    }
+    20% { 
+        color: #88DF81;
+    }
+    40% {
+        color: #82BE9C
+        ;
+    }
+    60% {
+        color: #7B9EB6;
+    }
+    80% {
+        color: #747DD0;
+    }
+}
+
+/* GENERAL */
+
+section {
+    border-left:1vw solid transparent;
+    border-right:1vw solid transparent;
+    border-image:url(./asset/bg.jpeg) 30;
+}
+
+h3 {
+    font-family: 'Arima Madurai', cursive;
+}
+
+/* CARDS SECTION */
+
+.cardSectionElements {
+    height: 50vh !important;
+}
+
+.card-img {
+    z-index: 2 !important;
+    opacity: 1 !important;
+	-webkit-transition: .3s ease-in-out !important;
+	transition: .3s ease-in-out !important;
+}
+
+.card-img:hover {
+    opacity:0.2 !important;
+}
+
+.cardsAnimals {
+    display: block;
+}
+
+/* ADD FORM*/
+
+.modal-content{
+    background-color: #8FFF67 !important;
+}
+
+#addButton, .deleteButton, #modifBtn {
+    border-style:none !important;
+    border-radius: 10px !important;   
+    background-color: #8FFF67!important;
+    width: 90% !important;
+    color:black !important;
+   
+}
+
+.updateButton, .update {
+    border-radius: 20px;
+}
+
+
+.formInput {
+    background-color: black;
+    color:white;
+}
+
+/* STATS SECTION */
+
+#statSection {
+    border-bottom:1vw solid transparent;
+    border-image:url(./asset/bg.jpeg) 30;
+}
+
+#bootstrapBars {
+    background-color: #8FFF67 !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 576px) {
+    .title{
+        font-size: 75px;
+    }
+
+}

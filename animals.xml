@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<animals>
+    
+
+
+    
+
+
+    <animalsInfo>
+        <name>Leopard</name>
+        <weight>50</weight>
+        <size>3</size>
+        <speed>50</speed>
+        <diet>carnivorous</diet>
+        <location>Africa and America</location>
+        <photo>./asset/panthere.jpg</photo>
+    </animalsInfo>
+
+    
+
+    
+
+    
+
+    <animalsInfo>
+        <name>Racoon</name>
+        <weight>9</weight>
+        <size>0.8</size>
+        <speed>20</speed>
+        <diet>omnivorous</diet>
+        <location>America</location>
+        <photo>https://m.espacepourlavie.ca/sites/espacepourlavie.ca/files/styles/gal-photo-large/public/cr_eplv-claude-lafond-cl_110614_020_625x417.jpg?itok=GBiatDlE</photo>
+    </animalsInfo>
+
+<animalsInfo><name>dog</name><weight>30</weight><size>1</size><speed>35</speed><diet>carnivorous</diet><location>world</location><photo>https://cdn.mos.cms.futurecdn.net/ASHH5bDmsp6wnK6mEfZdcU.jpg</photo></animalsInfo><animalsInfo><name>panther</name><weight>80</weight><size>1.5</size><speed>65</speed><diet>carnivorous</diet><location>africa and asia</location><photo>https://www.zoo-la-fleche.com/fileadmin/user_upload/zoo_de_la_fleche/animaux_d_asie/zoo-de-la-fleche-panthere-noire-05.jpg</photo></animalsInfo></animals>
